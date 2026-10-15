@@ -471,47 +471,48 @@ main > section[data-cover]{position:sticky}
   .bv-logo{width:187.5px;height:50px}
   .actions a{font-size:12px}
 
-  /* 2. thành tựu: full màn hình */
-  .achv .stage{--pad:20px;display:grid;grid-template-columns:minmax(0,1fr) auto;grid-template-rows:auto auto minmax(0,1fr) auto auto;column-gap:16px;padding:60px 20px 20px}
+  /* 2. thành tựu: full màn hình (Figma 2356:10962) */
+  .achv .stage{--pad:20px;display:grid;grid-template-columns:minmax(0,1fr) auto;grid-template-rows:auto auto auto minmax(0,1fr) auto;column-gap:16px;padding:24px 20px 20px}
   .achv h2,.achv .groups,.achv .media,.achv .info,.achv .counter,.achv .skip{position:static;left:auto;right:auto;top:auto;bottom:auto}
-  .achv h2{grid-area:1/1;font:700 16px/1.4 var(--f-title);padding:0;max-width:120px}
+  .achv h2{grid-area:1/1;font:700 16px/1.4 var(--f-title);padding:0;max-width:110px}
   .achv .groups{grid-area:1/2;display:grid;justify-items:start;gap:0}
   .achv .groups button{font-size:12px;padding:2px 0}
-  .achv .media{position:relative;grid-area:2/1/3/3;margin-top:40px;width:100%;height:auto;aspect-ratio:362/243}
+  .achv .media{position:relative;grid-area:2/1/3/3;margin-top:32px;width:100%;height:auto;aspect-ratio:559/376}
   .achv .info{grid-area:3/1/4/3;margin-top:20px;width:auto;height:auto;min-height:0;display:block;overflow:hidden}
   .achv .txt > div{gap:16px}
-  .achv .hl{font-size:32px;line-height:1.3}
+  .achv .hl{font-size:24px;line-height:1.3}
   .achv .ds{font-size:14px}
   .achv .hint{display:none}
-  .achv .counter{grid-area:4/1;display:flex;gap:10px;margin-top:12px}
+  .achv .counter{grid-area:5/1;align-self:end;display:flex;gap:10px;margin:0}
   .achv .counter b{font-size:32px}.achv .counter span{font-size:14px;padding-top:3px}
-  .achv .skip{grid-area:5/1/6/3;display:flex;width:100%;margin-top:20px}
+  .achv .skip{grid-area:5/2;align-self:end;justify-self:end;display:inline-flex;width:auto;margin:0}
 
-  /* 3. giải thưởng: khung ghim full màn hình, ảnh trên – giải active ngay dưới ảnh */
-  .aw-stage{--pad:20px;--side:calc(100vw - 40px);--imgh:calc((100vw - 40px)*243/362);--line:calc(210px + var(--imgh) + 20px)}
-  .aw-h{top:60px;font:700 16px/1.4 var(--f-title)}
-  .aw-meta{top:142px;left:20px;right:20px;width:auto;flex-direction:row-reverse}
+  /* 3. giải thưởng: khung ghim full màn hình (Figma 2356:10720) — ảnh 267 trái, giải active ngay dưới ảnh */
+  .aw-stage{--pad:20px;--side:267px;--imgh:calc(267px*376/559);--line:calc(143px + var(--imgh) + 20px)}
+  .aw-h{top:20px;font:700 16px/1.4 var(--f-title)}
+  .aw-meta{top:75px;left:20px;right:20px;width:auto;flex-direction:row-reverse}
   .aw-groups{justify-items:start}
-  .aw-media{top:210px;bottom:auto;left:20px;right:20px;width:auto}
+  .aw-media{top:143px;bottom:auto;left:20px;right:auto;width:267px}
   .aw-col{left:20px;right:20px;
     -webkit-mask-image:linear-gradient(180deg,transparent calc(var(--line) - 6px),#000 var(--line),#000 calc(100% - 100px),transparent 100%);
     mask-image:linear-gradient(180deg,transparent calc(var(--line) - 6px),#000 var(--line),#000 calc(100% - 100px),transparent 100%)}
   .aw-it{gap:20px}
   .aw-it .t{width:auto;flex:1;font-size:14px}
-  .aw-it .y{width:auto;font-size:12px}
-  .aw-it.on{margin-block:24px}
+  .aw-it .y{width:116px;font-size:12px}
+  .aw-it.on{margin-block:20px}
   .aw-it.on .t{font-size:24px}
+  .aw-it.past{opacity:0;transition:opacity .15s,margin .6s var(--ease)} /* giải đã qua ẩn ngay → không đè lên giải active mới */
 
-  /* lịch sử: full màn hình */
-  .hist{height:calc(100svh - var(--hdr));min-height:620px;padding:60px 20px 20px;display:flex;flex-direction:column;gap:40px}
+  /* lịch sử: full màn hình (Figma 2356:10777) */
+  .hist{height:calc(100svh - var(--hdr));min-height:620px;padding:32px 20px 20px;display:flex;flex-direction:column;gap:40px}
   .hist .sec-h{font-weight:700;width:auto;padding:0}
   .hist > div.wrap{width:100%;margin:0;flex:1;min-height:0;display:flex}
   .hist-stage{flex:1;height:auto}
-  .hist-text{top:20px;width:calc(100% - 40px)}
+  .hist-text{top:32px;width:calc(100% - 40px)}
   .hist-text ul{font-size:16px}
-  .hist-pin{top:auto;bottom:228px;height:32px}
-  .wheel{top:calc(100% - 212px);width:741px;height:741px;margin-left:-370.5px}
-  .globe{top:calc(100% - 212px);transform:scale(.378);transform-origin:50% 0}
+  .hist-pin{top:auto;bottom:226px;height:32px}
+  .wheel{top:calc(100% - 202px);width:741px;height:741px;margin-left:-370.5px}
+  .globe{top:calc(100% - 202px);transform:scale(.378);transform-origin:50% 0}
   .wheel{--step:22deg} /* mobile: tối đa 3 năm trong khung */
   .ymark.far{opacity:0;pointer-events:none}
   .ymark button{font-size:16px;top:14px}
@@ -934,7 +935,7 @@ const Aw=(function(){
     const probe=list.cloneNode(true); probe.removeAttribute('id'); probe.classList.add('aw-probe');
     [...probe.children].forEach(li=>li.classList.remove('on')); list.parentNode.appendChild(probe);
     base=[...probe.children].map(li=>li.offsetTop); hts=[...probe.children].map(li=>li.offsetHeight); probe.remove();
-    EXTRA=mob()?20:innerWidth<768?8:54; // margin của mục active (70 / 36 / 24) trừ khoảng cách thường 16
+    EXTRA=mob()?20:innerWidth<768?4:54; // margin của mục active (70 / 36 / 24) trừ khoảng cách thường 16
     place();
   }
   const offs=i=>base[i]+(i?EXTRA:0);
@@ -948,7 +949,7 @@ const Aw=(function(){
   // ảnh: chỉ giữ ảnh đang hiển thị + ảnh mới trồi lên; chuyển nhanh thì huỷ hiệu ứng dở → không bao giờ lộ nhiều ảnh cùng lúc
   let cur=-1;
   function set(i){ if(i===cur) return; const prev=cur; cur=i;
-    its.forEach((li,k)=>li.classList.toggle('on',k===i));
+    its.forEach((li,k)=>{ li.classList.toggle('on',k===i); li.classList.toggle('past',k<i); });
     gbtn.forEach((b,g)=>b.classList.toggle('on',g===AWARDS[i][0]));
     now.textContent=pad(i+1);
     imgs.forEach((im,k)=>{ im.getAnimations().forEach(a=>a.cancel()); im.classList.toggle('show',k===i||k===prev); im.style.zIndex= k===i?2 : k===prev?1 : ''; });
